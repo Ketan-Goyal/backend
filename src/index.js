@@ -16,7 +16,7 @@ mongoose.connect("mongodb+srv://KetanGoyal:Ketan%404102@cluster0.hyuiwze.mongodb
   const noteRouter=require("./routes/notes");
   app.use("/notes",noteRouter);
   });
-const PortNo=process.env.PORT||3000;
+const PortNo=process.env.PORT|3000;
 app.listen(PortNo, function () {
   console.log("started local host at port no " + `${PortNo}`);
 });
