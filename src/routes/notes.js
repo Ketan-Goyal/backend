@@ -18,12 +18,12 @@ router.post("/add", async function (req, res) {
     content: req.body.content,
   });
   await newNote.save();
-  var response = { message: "new note created" + `with id ${newNote.id}` };
+  var response = { message: "new note created " + `with id ${newNote.id}` };
   res.json(response);
 });
 router.post("/delete", async function (req, res) {
   await Note.deleteOne({ id: req.body.id });
-  var response = { message: "note deletd successfully" + `id: ${req.body.id}` };
+  var response = { message: "note deletd successfully " + `id: ${req.body.id}` };
   res.json(response);
 });
 module.exports=router;
