@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGO_URI).then(function ()
   const noteRouter=require("./routes/notes");
   app.use("/notes",noteRouter);
 
-  const PortNo=process.env.PORT|3000;
+  const PortNo=process.env.PORT;
   app.listen(PortNo, function () {
     console.log("listening to port no " + `${PortNo}`);
     });
